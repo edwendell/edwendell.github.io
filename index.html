@@ -27,8 +27,8 @@
            ^ mude só esta parte do meio ^
   2. Não apague os sinais < > nem as aspas " ".
   3. Tudo que abre, fecha: <li> ... </li>, <p> ... </p>, <span> ... </span>.
-  4. Antes de enviar ao GitHub, teste: deixe index.html, foto.jpg e
-     qr-linkedin.png na mesma pasta e dê dois cliques no index.html.
+  4. Antes de enviar ao GitHub, teste: deixe index.html, foto.jpg,
+     qr-linkedin.png e Curriculo-Ed-Wendell.pdf na mesma pasta e dê dois cliques no index.html.
      Se algo sumiu ou ficou estranho, provavelmente faltou fechar
      alguma etiqueta perto do que você mudou.
 
@@ -48,8 +48,11 @@
     abra uma versão antiga do index.html e copie o conteúdo de volta.
   - Ou envie de novo o index.html que está funcionando.
 
-  IMPORTANTE: o PDF de uma página é um arquivo separado.
-  Mudanças aqui NÃO mudam o PDF.
+  IMPORTANTE: o botão "Baixar em PDF" baixa o arquivo
+  Curriculo-Ed-Wendell.pdf. Ele é separado deste código:
+  mudanças aqui NÃO mudam o PDF. Quando mudar algo importante
+  (emprego, certificação, telefone), atualize o PDF também e envie
+  o arquivo novo com o mesmo nome.
 =====================================================================
 -->
 <html lang="pt-BR">
@@ -362,12 +365,16 @@ footer span:last-child{grid-column:7/13;text-align:right}
     <p class="role">Requisitos, produto e gestão administrativa<small>Bacharel em Sistemas de Informação</small></p>
     <!-- FRASE CURTA. Lembre de atualizar o "Mais de 3 anos" com o tempo. -->
     <p class="pitch">Mais de 3 anos no setor público federal transformando necessidades das áreas de negócio em soluções que funcionam.</p>
-    <!-- BOTÕES. Para trocar o e-mail, mude o que vem depois de "mailto:". -->
+    <!-- BOTÕES
+         - "Baixar em PDF" baixa o arquivo Curriculo-Ed-Wendell.pdf, que precisa
+           estar na mesma pasta do site. Para atualizar o PDF, envie um
+           arquivo novo com o MESMO nome e ele substitui o antigo.
+         - Para trocar o e-mail, mude o que vem depois de "mailto:". -->
     <div class="actions">
-      <button class="btn" type="button" id="pdf">
+      <a class="btn" href="Curriculo-Ed-Wendell.pdf" download="Curriculo-Ed-Wendell.pdf">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 3v12m0 0-5-5m5 5 5-5M4 21h16"/></svg>
         Baixar em PDF
-      </button>
+      </a>
       <a class="btn ghost" href="mailto:edwendell308@gmail.com">Enviar e-mail</a>
     </div>
   </div>
@@ -626,7 +633,6 @@ footer span:last-child{grid-column:7/13;text-align:right}
   window.addEventListener('load',function(){requestAnimationFrame(function(){document.body.classList.add('loaded')})});
   setTimeout(function(){document.body.classList.add('loaded')},1500);
 
-  document.getElementById('pdf').addEventListener('click',function(){window.print()});
 
   [].forEach.call(document.querySelectorAll('.cert'),function(b){
     b.addEventListener('click',function(){
